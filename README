@@ -1,0 +1,15 @@
+=============================
+Editplus Color Schema for VIM
+=============================
+
+EditPlus : A color scheme that mimics the standard scheme found in the EditPlus text editor.
+
+It's customized light gray color schema. The original schema is here-
+http://vim.sourceforge.net/scripts/script.php?script_id=4087
+
+How to install
+==============
+
+Just put it in "~/.vim/colors" or in "<your vim directory>\vimfiles\colors" on Windows.
+
+Do ":color editplus" to apply it. If you want to install it as your default color scheme, just add "color editplus" to your vimrc file.
