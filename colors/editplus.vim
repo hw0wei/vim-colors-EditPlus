@@ -1,24 +1,30 @@
-" Vim colorscheme
-" Author:  Gary Willoughby 
-" Version: 1.4
-" Date:    24th October 2012
+" Modeline and Notes
+" vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker=[[[,]]] foldlevel=0 foldmethod=marker
+" ----------------------------------------------------------------------------
+" Author: HuangWei <hw0wei@163.com>
+" Verion: 1.0
+" URL: https://github.com/hw0wei/vim-colors-EditPlus
+" Modified: 2014/2/10
+" ----------------------------------------------------------------------------
 
+" Colorscheme instializtion [[[1
 set background=light
 hi clear
 if exists("syntax_on")
     syntax reset
 endif
 let colors_name = "EditPlus"
+" ]]]
 
-" GUI
+" GUI [[[1
 hi Blank                           guibg=white   guifg=white   gui=none
-hi Normal                          guibg=white   guifg=black   gui=none
-hi Cursor                          guibg=#555555               gui=none
+hi Normal                          guibg=#D8D8D8 guifg=black   gui=none
+hi Cursor                          guibg=#CA6D6C               gui=none
 hi CursorLine                      guibg=#E8E8E8               gui=none
 hi CursorColumn                    guibg=#E8E8E8               gui=none
-hi CursorLineNr                    guibg=#696969 guifg=white   gui=none
+hi CursorLineNr                    guibg=#696969 guifg=#B58900 gui=none
 hi Directory                       guibg=bg      guifg=blue    gui=none
-hi FoldColumn                      guibg=#696969 guifg=white   gui=none
+hi FoldColumn                      guibg=#696969 guifg=#B58900 gui=none
 hi Folded                          guibg=#E8E8E8 guifg=#808080 gui=none
 hi LineNr                          guibg=#696969 guifg=white   gui=none
 hi VertSplit                       guibg=#D4D0C8 guifg=white   gui=none
@@ -30,33 +36,38 @@ hi Title                           guibg=bg      guifg=black   gui=none
 hi Visual                          guibg=#316AC5 guifg=white   gui=none
 hi WarningMsg                      guibg=bg      guifg=red     gui=none
 hi! link SignColumn                CursorLine
+" ]]]
 
-" Popup menus
+" Popup menus [[[1
 hi Pmenu                           guibg=#E5E1CB guifg=#756D5B gui=none
 hi PmenuSbar                       guibg=#B99F86 guifg=fg      gui=none
 hi PmenuSel                        guibg=#316AC5 guifg=white   gui=none
 hi PmenuThumb                      guibg=#756D5B guifg=bg      gui=none
 hi WildMenu                        guibg=#94DE9E guifg=#2A2A2A gui=none
+"]]]
 
-" Diff
+" Diff [[[1
 hi DiffChange                      guibg=bg                    gui=none
 hi DiffAdd                         guibg=#8AC38A guifg=white   gui=none
 hi DiffDelete                      guibg=#b27272 guifg=white   gui=none
 hi DiffText                        guibg=#008FFF guifg=white   gui=none 
- 
-" Search
+"]]]
+
+" Search [[[1
 hi Search                          guibg=#316AC5 guifg=white  gui=none
 hi IncSearch                       guibg=#316AC5 guifg=white  gui=none
+"]]]
 
-" Spelling
+" Spelling [[[1
 if has("spell")
     hi SpellBad                    guibg=bg      guifg=red    gui=undercurl
     hi SpellCap                    guibg=bg      guifg=red    gui=undercurl
     hi SpellLocal                  guibg=bg      guifg=red    gui=undercurl
     hi SpellRare                   guibg=bg      guifg=red    gui=undercurl
 endif
+" ]]]
 
-" Syntax
+" Syntax [[[1
 hi Comment                         guibg=bg      guifg=#008000 gui=italic
 hi ToDo                            guibg=bg      guifg=#008000 gui=italic
 hi Constant                        guibg=bg      guifg=#008000 gui=none
@@ -78,12 +89,14 @@ hi Type                            guibg=bg      guifg=red     gui=none
 hi Special                         guibg=bg      guifg=fg      gui=none
 hi StorageClass                    guibg=bg      guifg=blue    gui=none
 hi Question                        guibg=bg      guifg=#2E8B57 gui=none
+" ]]]
 
-" Whitespace
+" Whitespace [[[1
 hi SpecialKey                      guibg=bg      guifg=#CCCCCC gui=none
 hi NonText                         guibg=bg      guifg=#CCCCCC gui=none
+" ]]]
 
-" HTML
+" HTML [[[1
 hi htmlnone                        guibg=bg      guifg=fg      gui=none
 hi htmlItalic                      guibg=bg      guifg=fg      gui=italic
 hi htmlUnderline                   guibg=bg      guifg=fg      gui=underline
@@ -94,8 +107,9 @@ hi htmlUnderlineItalic             guibg=bg      guifg=fg      gui=underline,ita
 hi! link HTMLString                String
 hi! link HTMLTag                   Keyword
 hi! link HTMLEndTag                Keyword
+" ]]]
 
-" CSS
+" CSS [[[1
 hi cssValueLength                  guibg=bg      guifg=#800080 gui=none
 hi cssValueInteger                 guibg=bg      guifg=#800080 gui=none
 hi cssValueNumber                  guibg=bg      guifg=#800080 gui=none
@@ -104,7 +118,7 @@ hi cssValueTime                    guibg=bg      guifg=#800080 gui=none
 hi cssValueFrequency               guibg=bg      guifg=#800080 gui=none
 hi cssFunctionName                 guibg=bg      guifg=red     gui=none
 hi cssColor                        guibg=bg      guifg=#800080 gui=none
-hi cssImportant                    guibg=bg      guifg=red     gui=none
+hi cssBoxAttrsImportant                    guibg=bg      guifg=red     gui=none
 hi! link cssComment                Comment
 hi! link cssTagName                Normal
 hi! link cssSelectorOp             Normal
@@ -152,15 +166,17 @@ hi! link cssFontDescriptorProp     Keyword
 hi! link cssFontDescriptorAttr     Normal
 hi! link cssUnicodeRange           String
 hi! link cssClassName              Normal
+" ]]]
 
-" Tlist
+" Tlist [[[1
 hi! link MyTagListComment          Comment
 hi! link MyTagListFileName         Directory
 hi! link MyTagListTitle            Type
 hi! link MyTagListTagName          CursorLine
 hi! link MyTagListTagScope         Comment
+" ]]]
 
-" NERDTree
+" NERDTree [[[1
 hi! link NERDTreePart              NonText
 hi! link NERDTreePartFile          NonText
 hi! link NERDTreeFile              Normal
@@ -185,8 +201,9 @@ hi! link NERDTreeOpenable          NonText
 hi! link NERDTreeFlag              Blank
 hi! link NERDTreeRO                Normal
 hi! link NERDTreeCurrentNode       Normal
+" ]]]
 
-" CtrlP
+" CtrlP [[[1
 hi! link CtrlPNoEntries ErrorMsg
 hi! link CtrlPMatch     IncSearch
 hi! link CtrlPLinePre   NonText
@@ -206,3 +223,4 @@ hi! link CtrlPBookmark  Identifier
 hi! link CtrlPMode1     StatusLine
 hi! link CtrlPMode2     StatusLine
 hi! link CtrlPStats     Function
+" ]]]
