@@ -68,7 +68,7 @@ endif
 " ]]]
 
 " Syntax [[[1
-hi Comment                         guibg=bg      guifg=#008000 gui=italic
+hi Comment                         guibg=bg      guifg=#008000 gui=none
 hi ToDo                            guibg=bg      guifg=#008000 gui=italic
 hi Constant                        guibg=bg      guifg=#008000 gui=none
 hi Statement                       guibg=bg      guifg=blue    gui=none
